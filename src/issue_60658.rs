@@ -1,11 +1,3 @@
-// Currently fails because our param-env has two predicates:
-//     <T as Foo<'a>>
-// and
-//     <T as Foo<'0>>
-// and for some reason, that causes us to fail normalizing
-//     <T as Foo<'0>>::Future
-// which then causes us to error.
-
 use std::{future::Future, marker::PhantomData, pin::Pin};
 
 pub trait Foo<'a> {
