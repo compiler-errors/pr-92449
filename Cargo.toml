@@ -1,0 +1,9 @@
+[package]
+name = "pr-92449"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+futures = "*"
+parking_lot = "*"
+tokio = { version = "*", features = ["rt"] }
